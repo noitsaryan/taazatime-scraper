@@ -35,9 +35,9 @@ function page() {
       <div dangerouslySetInnerHTML={{ __html: data.firstParagraph && data.firstParagraph.replace(periodRegex, addBrTag) || ""}} />
       <h1>Table</h1>
       { data.tableData.map((e: any, i: number) => (
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-2' key={i}>
         {e.map((x: any, y: number) => (
-            <p key={i}> {x} </p>
+            <p key={y}> {x} </p>
         ))}
           </div>
       ))}
