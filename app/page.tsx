@@ -37,7 +37,7 @@ function page() {
       { data.tableData.map((e: any, i: number) => (
         <div className='grid grid-cols-2'>
         {e.map((x: any, y: number) => (
-            <p> {x} </p>
+            <p key={i}> {x} </p>
         ))}
           </div>
       ))}
